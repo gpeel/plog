@@ -11,7 +11,7 @@ https://www.npmjs.com/package/@gpeel/plog
 
 ## Example of what you get
 
-![img.png](./projects/gpeel/plog/clickable-logs-in-browser.png)
+![img.png](clickable-logs-in-browser.png)
 
 ### You get obvious **colors** and also keep the **logs clickable** to navigate to your source code.
 
@@ -38,7 +38,7 @@ export const environment = {
 
 As you can see, on the right of this image app.component.ts:16 for example.
 
-![img.png](./projects/gpeel/plog/clickable-logs-code-navigable.png)
+![img.png](clickable-logs-code-navigable.png)
 
 ## DECLARATION
 

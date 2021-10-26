@@ -13,9 +13,9 @@ https://www.npmjs.com/package/@gpeel/plog
 
 ![img.png](./projects/gpeel/plog/clickable-logs-in-browser.png)
 
-You get obvious **colors** and also keep the logs clickable to navigate to the source code.
+### You get obvious **colors** and also keep the **logs clickable** to navigate to your source code.
 
-To get those style the loggers have bee defined as follow:
+To get those style the loggers have been defined as follow:
 
 ````typescript
 export const environment = {

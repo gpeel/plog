@@ -48,14 +48,10 @@ And now you can change that to src with :
 
 You should do it ONCE on your machine:
 
-    C:\me\_gitgpeel\my-libs-npmjs\plog\gpeel-plog-lib-ng9>npm login
+    $npm login
     Username: gpeel
     Password:
-    Email: (this IS public) gauthier.peel@gmail.com
+    Email: (this IS public) your.email@hhh.ccc
     Logged in as gpeel on https://registry.npmjs.org/.
 
 This creates a .npmrc file in your c/users/gauthier with the credit to log in https://www.npmjs.com/
-
-<hr>
-GENERATED text now :
-<hr>

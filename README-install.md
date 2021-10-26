@@ -29,3 +29,7 @@ to install because missing by default and used but my rules:
 - and disable tslint !
 - Go to Tools -> Actions On Save and check - reformat Code, Optimize Imports, Rearrange Code Run code cleanup and run
   eslint --fix
+
+## bump
+
+    npm install -g bump-cli

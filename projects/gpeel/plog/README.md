@@ -11,7 +11,7 @@ https://www.npmjs.com/package/@gpeel/plog
 
 ## Example of what you get
 
-![img.png](https:/github.com/gpeel/plog/raw/master/projects/gpeel/plog/clickable-logs-in-browser.png)
+<img  src="https:/github.com/gpeel/plog/raw/master/projects/gpeel/plog/clickable-logs-in-browser.png" style="max-width:100%;">
 
 ### You get obvious **colors** and also keep the **logs clickable** to navigate to your source code.
 
@@ -230,7 +230,7 @@ Plog.action("message"); will log
 
 You can see ALL available loggers above in DEV/environment.ts
 
-Typescript source codes are deliverd inside the installed packge in node_modules/@gpeel/plog/src/lib
+Typescript source codes are delivered inside the installed packge in node_modules/@gpeel/plog/src/lib
 
 Github repo at :
 https://github.com/gpeel/plog

@@ -230,7 +230,7 @@ Plog.action("message"); will log
 
 You can see ALL available loggers above in DEV/environment.ts
 
-Typescript source codes are deliverd inside the installed packge in node_modules/@gpeel/plog/src/lib
+Typescript source codes are delivered inside the installed packge in node_modules/@gpeel/plog/src/lib
 
 Github repo at :
 https://github.com/gpeel/plog

@@ -12,5 +12,17 @@
     "angular",
     "logger"
   ],
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gpeel/plog.git"
+  },
+  "author": {
+    "name": "Gauthier Peel",
+    "email": "gauthier.peel.113@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpeel/plog/issues"
+  },
+  "homepage": "https://github.com/gpeel/plog"
 }

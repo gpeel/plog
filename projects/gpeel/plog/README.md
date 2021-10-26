@@ -6,6 +6,16 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
     ng i @gpeel/plog
 
+## Example of what you get
+
+![clickable-logs-in-browser.png](clickable-logs-in-browser.png)
+
+You get obvious **colors** and also keep the logs clickable to navigate to the source code.
+
+As you can see, on the right of this image app.component.ts:16 for example.
+
+![clickable-logs-code-navigable.png](clickable-logs-code-navigable.png)
+
 ## DECLARATION
 
 ````typescript
@@ -70,103 +80,104 @@ And your developpment environment.ts would activate much more loggers (here all 
 export const environment = {
   production: false,
   plog: {
-    debug: 'green',
-    info: 'blue',
-    error: 'red',
-    warn: 'orange',
+    debug: 'color:limegreen;font-weight:bold',
+    info: 'color:blue',
+    error: 'color:red',
+    warn: 'color:orange',
 
     // Performance logs
-    perf: 'darkturquoise',
-    perfComponent: ['darkturquoise', 'PERF-¤¤'],
-    perfCD: ['darkturquoise', 'PERF-¤¤¤¤¤¤¤'],
-    perfDom: ['darkturquoise', 'PERF-¤-¤-¤-¤'],
+    perf: 'color:darkturquoise',
+    perfComponent: ['color:darkturquoise', 'PERF-¤¤'],
+    perfCD: ['color:darkturquoise', 'PERF-¤¤¤¤¤¤¤'],
+    perfDom: ['color:darkturquoise', 'PERF-¤-¤-¤-¤'],
 
     // NG hooks
-    ngOnChanges: ['orange', 'OnChange'],
-    ngOnInit: ['orange', 'OnInit'],
-    ngOnDestroy: ['orange', 'OnDestroy'],
-    ngDoCheck: ['orange', 'DoCheck'],
-    ngAfterContentInit: ['orange', 'AfterContentInit'],
-    ngAfterContentChecked: ['orange', 'AfterContentChecked'],
-    ngAfterViewInit: ['orange', 'AfterViewInit'],
-    ngAfterViewChecked: ['orange', 'AfterViewChecked'],
+    ngOnChanges: ['color:orange', 'OnChange'],
+    ngOnInit: ['color:orange', 'OnInit'],
+    ngOnDestroy: ['color:orange', 'OnDestroy'],
+    ngDoCheck: ['color:orange', 'DoCheck'],
+    ngAfterContentInit: ['color:orange', 'AfterContentInit'],
+    ngAfterContentChecked: ['color:orange', 'AfterContentChecked'],
+    ngAfterViewInit: ['color:orange', 'AfterViewInit'],
+    ngAfterViewChecked: ['color:orange', 'AfterViewChecked'],
 
     // constructor logs
-    create: ['green', 'new'],
-    createComponent: ['green', 'New-@Comp'],
-    createDirective: ['green', 'New-@Dir'],
-    createService: ['green', 'New-Svc'],
-    createPipe: ['green', 'New-@Pipe'],
-    createGuard: ['green', 'New-@Guard'],
-    createResolver: ['green', 'New-@Resolver'],
+    create: ['color:green', 'new'],
+    createComponent: ['color:green', 'New-@Comp'],
+    createDirective: ['color:green', 'New-@Dir'],
+    createService: ['color:green', 'New-Svc'],
+    createPipe: ['color:green', 'New-@Pipe'],
+    createGuard: ['color:green', 'New-@Guard'],
+    createResolver: ['color:green', 'New-@Resolver'],
 
     // NG types
-    resolve: 'brown',
-    guard: 'sandybrown',
-    validator: 'plum',
-    pipe: 'brown',
-    callback: 'violet',
+    resolve: 'color:brown',
+    guard: 'color:sandybrown',
+    validator: 'color:plum',
+    pipe: 'color:brown',
+    callback: 'color:violet',
 
-    state: 'blueviolet', // Redux style or BehaviorSubject, as you want
+    state: 'color:blueviolet', // Redux style or BehaviorSubject, as you want
     // specific logs for NGXS, Akita
-    action: ['#8f72cf', '@ACTION'], // to log inside Action method
-    select: ['#84467c', '@SELECT'], // to log inside select method
-    errorState: ['#cf3c04', '@ERROR'], // to log error in Store
-    effect: ['8F72CF', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)
-    cache: ['blueviolet', '@EFFECT'],
+    action: ['color:#8f72cf', '@ACTION'], // to log inside Action method
+    select: ['color:#84467c', '@SELECT'], // to log inside select method
+    errorState: ['color:#cf3c04', '@ERROR'], // to log error in Store
+    effect: ['color:#8F72CF;font-weight:bold;', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)
+    cache: ['color:blueviolet', '@EFFECT'],
 
     // Specific loggers for @gpeel/my-validators
-    validationCompute: ['orange', '@VALID'], // tracing validators when they compute
-    validationErrorMsgRefresh: ['orange', '@VALID_PERF'], // tracing refresh of <my-error-msg>
-    validationErrorMsgCreation: ['orange', '@ERROR_MSG_NEW'], // tracing creation of component <my-error-msg>
-    errorMsg: ['orange', '@VALID'], // used by <error-msg> deprecated
+    validationCompute: ['color:orange', '@VALID'], // tracing validators when they compute
+    validationErrorMsgRefresh: ['color:orange', '@VALID_PERF'], // tracing refresh of <my-error-msg>
+    validationErrorMsgCreation: ['color:orange', '@ERROR_MSG_NEW'], // tracing creation of component <my-error-msg>
+    errorMsg: ['color:orange', '@VALID'], // used by <error-msg> deprecated
 
     // network actions (interceptors)
-    network: ['blue', 'HTTP'],
-    networkRequest: ['blue', 'HttpRequest'],
-    networkResponse: ['blue', 'HttpResponse'],
-    networkError: ['red', 'HTTP-Error'],
-    networkCreate: ['green', 'NEW-HTTP'],
+    network: ['color:blue', 'HTTP'],
+    networkRequest: ['color:blue', 'HttpRequest'],
+    networkResponse: ['color:blue', 'HttpResponse'],
+    networkError: ['color:red', 'HTTP-Error'],
+    networkCreate: ['color:green', 'NEW-HTTP'],
 
-    httpCall: ['springgreen', 'HTTP-CALL'], // http prefix : for service logic
-    httpSuccess: ['springgreen', 'HTTP-SUCCESS'],
-    httpError: ['red', 'HTTP-ERROR'],
-    httpDebug: ['springgreen', 'HTTP-TAP'],
+    httpCall: ['color:springgreen', 'HTTP-CALL'], // http prefix : for service logic
+    httpSuccess: ['color:springgreen', 'HTTP-SUCCESS'],
+    httpError: ['color:red', 'HTTP-ERROR'],
+    httpDebug: ['color:springgreen', 'HTTP-TAP'],
 
-    obsSubscribe: ['springgreen', 'OBS-sub'],
-    obsSuccess: ['springgreen', 'OBS-SUCCESS'],
-    obsError: ['red', 'OBS-ERROR'],
-    obsDebug: ['springgreen', 'OBS-DEBUG'],
+    obsSubscribe: ['color:springgreen', 'OBS-sub'],
+    obsSuccess: ['color:springgreen', 'OBS-SUCCESS'],
+    obsError: ['color:red', 'OBS-ERROR'],
+    obsDebug: ['color:springgreen', 'OBS-DEBUG'],
+
 
     // tests
-    tu: ['green', 'tu'],
-    tuBeforeEach: ['slateblue', 'tu-BEFORE-EACH'],
-    tuBeforeAll: ['slateblue', 'tu-BEFORE-ALL'],
-    tuAfterEach: ['tomato', 'tu-AFTER-EACH'],
-    tuAfterAll: ['tomato', 'tu-AFTER-ALL'],
-    tuArrange: ['blue', 'tu'],
-    tuAct: ['blueviolet', 'tu'],
-    tuAssert: ['brown', 'tu'],
-    ti: ['green', 'ti'],
-    te2e: ['green', 'e2e'],
+    tu: ['color:green', 'tu'],
+    tuBeforeEach: ['color:slateblue', 'tu-BEFORE-EACH'],
+    tuBeforeAll: ['color:slateblue', 'tu-BEFORE-ALL'],
+    tuAfterEach: ['color:tomato', 'tu-AFTER-EACH'],
+    tuAfterAll: ['color:tomato', 'tu-AFTER-ALL'],
+    tuArrange: ['color:blue', 'tu'],
+    tuAct: ['color:blueviolet', 'tu'],
+    tuAssert: ['color:brown', 'tu'],
+    ti: ['color:green', 'ti'],
+    te2e: ['color:green', 'e2e'],
 
     // colors
-    pink: ['#FF40BD;', '######'], // pink flashy
-    red: 'red', // red without the console.error() stacktrace
-    orange: ['orange', '######'],
-    green: ['springgreen', '######'],
-    blue: ['cadetblue', '######'],
-    lightBlue: ['darkturquoise', '######'],
-    violet: ['blueviolet', '######'],
+    pink: ['color:#FF40BD;', '######'], // pink flashy
+    red: 'color:red', // red without the console.error() stacktrace
+    orange: ['color:orange', '######'],
+    green: ['color:springgreen', '######'],
+    blue: ['color:cadetblue', '######'],
+    lightBlue: ['color:darkturquoise', '######'],
+    violet: ['color:blueviolet', '######'],
 
     // same color-loggers with a prefix 'color' (easier to find with intellisense)
-    colorPink: ['#FF40BD;', '######'], // pink flashy
-    colorRed: 'red', // red without the console.error() stacktrace
-    colorOrange: ['orange', '######'],
-    colorGreen: ['springgreen', '######'],
-    colorBlue: ['cadetblue', '######'],
-    colorLightBlue: ['darkturquoise', '######'],
-    colorViolet: ['blueviolet', '######']
+    colorPink: ['color:#FF40BD;', '######'], // pink flashy
+    colorRed: 'color:red', // red without the console.error() stacktrace
+    colorOrange: ['color:orange', '######'],
+    colorGreen: ['color:springgreen', '######'],
+    colorBlue: ['color:cadetblue', '######'],
+    colorLightBlue: ['color:darkturquoise', '######'],
+    colorViolet: ['color:blueviolet', '######']
   }
 };
 

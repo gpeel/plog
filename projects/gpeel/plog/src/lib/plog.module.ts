@@ -108,6 +108,6 @@ function initialize(plogConfig: PlogConfig): void {
         prefixCapitalized = prefixCapitalized + ' ';
       }
     }
-    (Plog as Indexable)[key] = console.info.bind(console, `%c${prefixCapitalized}`, `color: ${color}`);
+    (Plog as Indexable)[key] = console.info.bind(console, `%c${prefixCapitalized}`, `${color}`);
   });
 }

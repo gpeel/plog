@@ -41,8 +41,61 @@ And now you can change that to src with :
 * MODIFED by Gauthier
 
       "paths": {
-          "@gpeel/plog": ["projects/gpeel/plog/src/public-api.ts"]
+          "@gpeel/plog": ["src/public-api.ts"]
       }
+
+##      
+
+In .eslintrc.json the geneated path is wrong, change it from :
+line 2
+
+    "extends": "../../.eslintrc.json",
+
+to :
+
+    "extends": "../../../.eslintrc.json",
+
+And also later tsconfig paths are wrong.
+
+````json
+{
+  "extends": "../../../.eslintrc.json",
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.lib.json",
+          "tsconfig.spec.json"
+        ],
+        "createDefaultProgram": true
+      },
+````
+
+````json
+{
+  "extends": "../../../.eslintrc.json",
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.lib.json",
+          "tsconfig.spec.json"
+        ],
+        "createDefaultProgram": true
+      },
+````
 
 ## npm login
 

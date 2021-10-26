@@ -38,7 +38,7 @@ export const environment = {
 
 As you can see, on the right of this image app.component.ts:16 for example.
 
-![img.png](https:/github.com/gpeel/plog/raw/master/projects/gpeel/plog/clickable-logs-code-navigable.png)
+<img  src="https:/github.com/gpeel/plog/raw/master/projects/gpeel/plog/clickable-logs-code-navigable.png" style="max-width:100%;">
 
 ## DECLARATION
 

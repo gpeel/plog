@@ -44,22 +44,6 @@ And now you can change that to src with :
           "@gpeel/plog": ["projects/gpeel/plog/src/public-api.ts"]
       }
 
-## Building without IVY
-
-With
-
-        ng build @gpeel/plog
-
-You get a warning :
-
-        Building Angular Package
-        ******************************************************************************
-        It is not recommended to publish Ivy libraries to NPM repositories.
-        Read more here: https://v9.angular.io/guide/ivy#maintaining-library-compatibility
-        ******************************************************************************
-
-It is recommended to build in --prod mode
-
 ## npm login
 
 You should do it ONCE on your machine:
@@ -75,50 +59,3 @@ This creates a .npmrc file in your c/users/gauthier with the credit to log in ht
 <hr>
 GENERATED text now :
 <hr>
-
-## eslint migration of lib
-
-to make lib eslint Correct I changed in projects/gpeel/plog/.eslintrc.json/.eslintrc  >FROM :
-
- ````json
-{
-  "extends": "../../.eslintrc.json",
-  "ignorePatterns": [
-    "!**/*"
-  ],
-  "overrides": [
-    {
-      "files": [
-        "*.ts"
-      ],
-      "parserOptions": {
-        "project": [
-          "projects/gpeel/plog/tsconfig.lib.json",
-          "projects/gpeel/plog/tsconfig.spec.json"
-        ],
-        "createDefaultProgram": true
-      },
-````
-
-TO:
-
- ````json
-{
-  "extends": "../../../.eslintrc.json",
-  "ignorePatterns": [
-    "!**/*"
-  ],
-  "overrides": [
-    {
-      "files": [
-        "*.ts"
-      ],
-      "parserOptions": {
-        "project": [
-          "tsconfig.lib.json",
-          "tsconfig.spec.json"
-        ],
-        "createDefaultProgram": true
-      },
-
-````

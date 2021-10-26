@@ -2,6 +2,12 @@
   "name": "gpeel-plog-ng12",
   "version": "0.0.0",
   "scripts": {
+    "bump_1_patch": "bump projects/gpeel/plog/package.json",
+    "bump_1_major": "bump --major projects/gpeel/plog/package.json",
+    "bump_1_minor": "bump --minor projects/gpeel/plog/package.json",
+    "build-plog-lib_2": "ng build @gpeel/plog --prod",
+    "cpSources_3": "cpx -v \"./projects/gpeel/plog/src/**/*.*\"   ./dist/gpeel/plog/src",
+    "publish_4": "cd ./dist/gpeel/plog && npm publish --access public ",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -47,6 +53,8 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^12.1.1",
-    "typescript": "~4.3.5"
+    "typescript": "~4.3.5",
+    "bump-cli": "^2.2.6",
+    "cpx": "^1.5.0"
   }
 }

@@ -61,25 +61,6 @@ export class AppModule {
 }
 ````
 
-## USAGE
-
-You don't need to inject anything, Plog is a simple instance.
-
-````typescript
-import {Plog} from '@gpeel/plog';
-
-Component({})
-
-export class AppComponent {
-  constructor() {
-    Plog.createComponent('AppComponent');
-    Plog.debug('Debug AppComponent');
-    Plog.action('Action AppComponent');
-  }
-````
-
-## Results
-
 ## PROD environment.prod.ts
 
 Your ./environments/environments.ts and environments-prod.ts would typically look like :

@@ -1,74 +1,43 @@
-# COlorful logs with @gpeel/plog
+import {PlogConfig} from './plog';
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
-
-## INSTALLATION
-
-    ng i @gpeel/plog
-
-## DECLARATION
-
-````typescript
-import {PlogModule} from '@gpeel/plog';
-import {environment} from '../environments/environment';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    PlogModule.forRoot(environment) // <<< HERE, takes into account you loggers definition in environment.ts
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule {
-}
-````
-
-## USAGE
-
-You don't need to inject anything, Plog is a simple instance.
-
-````typescript
-import {Plog} from '@gpeel/plog';
-
-Component({})
-
-export class AppComponent {
-  constructor() {
-    Plog.createComponent('AppComponent');
-    Plog.debug('Debug AppComponent');
-    Plog.action('Action AppComponent');
-  }
-````
-
-## Results
-
-## PROD environment.prod.ts
-
-Your ./environments/environments.ts and environments-prod.ts would typically look like :
-
-````typescript
-
-export const environment = {
-  production: false,
-  plog: {
-    error: 'red',
-    warn: 'orange',
-    // any other loggers you want ..
-  }
-};
-````
-
-## DEV environment.ts
-
-And your developpment environment.ts would activate much more loggers (here all are activated) :
-
-````typescript
-export const environment = {
-  production: false,
+/**
+ * Your ./environments/environments.ts would typically look like :
+ * export const environment = {
+ *    production: false,
+ *    plog : {
+ *      // plog chosen activated loggers
+ *      // if a logger name is not present, there is no log for this logger
+ *      // example, here "warn" is not defined, so Plog.warn( ...string[]) will no log
+ *      // you can choose the color and the prefix.
+ *      // The defaut prefix is the name of the logger in UPPERCASE.
+ *      // Plog.anyLogger()  has the same API as console.log()
+ *      // ie  log(...data: any[]): void;
+ *      //
+ *      // action: [ <color>, <log prefix>],
+ *      //
+ *      // action: ['#8f72cf', '@ACTION'],
+ *      //====>  Plog.action('message'); will log  @ACTION: message
+ *      //
+ *      // action: ['red', '@ACTION-HHH'],
+ *      //====>  Plog.action('message'); will log  @ACTION-HHH: message
+ *      //
+ *      // action: 'red',
+ *      //====>  Plog.action('message'); will log  ACTION: message
+ *      //
+ *      // I
+ *      debug: 'green',
+ *      info: 'blue',
+ *    }
+ * };
+ * PLOG_ENVIRONMENT_DEFAULT is taken in DEV mode if no environment.plog property is defined
+ * PLOG_ENVIRONMENT_PROD_DEFAULT is taken in PROD mode if no environment.plog property is defined on your file environment.prod.ts
+ *
+ * A PlogConfig is basically an environment.ts struture with a plog property defining the logging loggers.
+ * Feel free to copy/paste this config into your environment.ts
+ * And change whatever color and prefix you want.
+ * BUT you can't ADD a new logger.
+ */
+export const PLOG_ENVIRONMENT_DEFAULT: PlogConfig = {
   plog: {
     debug: 'green',
     info: 'blue',
@@ -138,6 +107,7 @@ export const environment = {
     obsError: ['red', 'OBS-ERROR'],
     obsDebug: ['springgreen', 'OBS-DEBUG'],
 
+
     // tests
     tu: ['green', 'tu'],
     tuBeforeEach: ['slateblue', 'tu-BEFORE-EACH'],
@@ -169,33 +139,3 @@ export const environment = {
     colorViolet: ['blueviolet', '######']
   }
 };
-
-````
-
-To deactivate a logger, simply comment its line.
-
-You can change the color, and the repfix.
-
-You define in environment.plog all activated loggers. if a logger name is not present, there is no log for this logger.
-example, here if "debug" is not defined, Plog.debug( ...string[]) will not log. S you can keep the codeline in your code
-even in production, you just have to comment the logger's line in environment.ts.
-
-you can choose the color and the prefix :
-
-        aLogger: [ YourColor, YourLogPrefix>],
-
-example
-
-        action: ['#8f72cf', '@ACTION'],
-
-Plog.action("message"); will log
-
-        @ACTION: message
-
-You can see ALL available loggers above in DEV/environment.ts
-
-Typescript source codes are deliverd inside the installed packge in node_modules/@gpeel/plog/src/lib
-
-Github repo at :
-https://github.com/gpeel/plog
-

@@ -1,8 +1,8 @@
 import {CommonModule} from '@angular/common';
 import {APP_INITIALIZER, InjectionToken, ModuleWithProviders, NgModule} from '@angular/core';
 import {Plog, PlogConfig} from './plog';
-import {PLOG_CONFIG_DEFAULT} from './PLOG_CONFIG_DEFAULT';
-import {PLOG_CONFIG_DEFAULT_PROD} from './PLOG_CONFIG_DEFAULT_PROD';
+import {PLOG_ENVIRONMENT_DEFAULT} from './PLOG_ENVIRONMENT_DEFAULT';
+import {PLOG_ENVIRONMENT_PROD_DEFAULT} from './PLOG_ENVIRONMENT_PROD_DEFAULT';
 
 export const ENV_CONFIG = new InjectionToken<any[]>('LOGGER_CONFIG');
 
@@ -52,18 +52,18 @@ export function rootPlogFactory(environment: any): () => Promise<any> {
           /**
            * get the Default config for DEV or PROD mode
            */
-          const CONFIG = environment.production ? PLOG_CONFIG_DEFAULT_PROD : PLOG_CONFIG_DEFAULT;
+          const CONFIG = environment.production ? PLOG_ENVIRONMENT_PROD_DEFAULT : PLOG_ENVIRONMENT_DEFAULT;
 
           if (!environment.plog) {
             console.warn('****************************');
             console.warn('YOU DID NOT initialize Plog explicitly =>  Taking the default configuration for Plog');
             if (environment.production) {
-              console.warn('Taking : node_module/gpeel/plog/src/lib/PLOG_CONFIG_DEFAULT_PROD.ts');
+              console.warn('Taking : node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_PROD_DEFAULT.ts.ts');
             } else {
-              console.warn('Taking : node_module/gpeel/plog/src/lib/PLOG_CONFIG_DEFAULT.ts');
+              console.warn('Taking : node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_DEFAULT.ts');
             }
             console.warn('If you want something else configure your environment.ts file');
-            console.warn('Example in node_module/gpeel/plog/src/lib/PLOG_CONFIG_DEFAULT_PROD.ts comment');
+            console.warn('Example in node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_DEFAULT.ts comment');
             console.warn('****************************');
           }
 

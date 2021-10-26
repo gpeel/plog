@@ -3,5 +3,5 @@
  */
 export {Plog} from './lib/plog';
 export {PlogModule} from './lib/plog.module';
-export {PLOG_CONFIG_DEFAULT_PROD} from './lib/PLOG_CONFIG_DEFAULT_PROD';
-export {PLOG_CONFIG_DEFAULT} from './lib/PLOG_CONFIG_DEFAULT';
+export {PLOG_ENVIRONMENT_PROD_DEFAULT} from './lib/PLOG_ENVIRONMENT_PROD_DEFAULT';
+export {PLOG_ENVIRONMENT_DEFAULT} from './lib/PLOG_ENVIRONMENT_DEFAULT';

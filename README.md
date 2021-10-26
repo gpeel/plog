@@ -1,4 +1,4 @@
-# COlorful logs with @gpeel/plog
+# Colorful logs with @gpeel/plog
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
@@ -14,6 +14,27 @@ https://www.npmjs.com/package/@gpeel/plog
 ![img.png](./projects/gpeel/plog/clickable-logs-in-browser.png)
 
 You get obvious **colors** and also keep the logs clickable to navigate to the source code.
+
+To get those style the loggers have bee defined as follow:
+
+````typescript
+export const environment = {
+  production: false,
+  plog: {
+    createComponent: ['color:green;', 'New-@Comp'],
+
+    error: 'color:red; font-size:1rem;',
+    warn: 'color:orange',
+    info: 'color:blue',
+    debug: 'color:limegreen;font-weight:bold',
+
+    action: ['color:#8f72cf; font-weight:bold;', '@ACTION'], // to log inside Action method
+    tu: ['color:blue; font-size:1rem;', 'TU'],
+    errorState: ['color:#cf3c04', '@ERROR'], // to log error in Store
+
+  }
+};
+````
 
 As you can see, on the right of this image app.component.ts:16 for example.
 
@@ -189,7 +210,7 @@ export const environment = {
 
 To deactivate a logger, simply comment its line.
 
-You can change the color, and the repfix.
+You can change the CSS (color or anything else), and the prefix.
 
 You define in environment.plog all activated loggers. if a logger name is not present, there is no log for this logger.
 example, here if "debug" is not defined, Plog.debug( ...string[]) will not log. S you can keep the codeline in your code
@@ -197,11 +218,11 @@ even in production, you just have to comment the logger's line in environment.ts
 
 you can choose the color and the prefix :
 
-        aLogger: [ YourColor, YourLogPrefix>],
+        aLogger: [ YourCSS, YourLogPrefix>],
 
 example
 
-        action: ['#8f72cf', '@ACTION'],
+        action: ['color:orange', '@ACTION'],
 
 Plog.action("message"); will log
 

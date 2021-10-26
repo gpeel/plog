@@ -3,10 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@gpeel/plog": [
-        "dist/gpeel/plog/gpeel-plog",
-        "dist/gpeel/plog"
-      ]
+      "@gpeel/plog": ["projects/gpeel/plog/src/public-api.ts"]
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

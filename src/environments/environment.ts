@@ -5,10 +5,13 @@
 export const environment = {
   production: false,
   plog: {
+
     debug: 'color:limegreen;font-weight:bold',
     info: 'color:blue',
-    error: 'color:red; font-size:1rem;',
+    // info: ['color:blue; font-size:1rem;font-weight:bold', 'MY-INFO'],
+    // info: 'jj nn, kkkk ht:bold', // with trash it does not crash!
     warn: 'color:orange',
+    error: 'color:red; font-size:1rem;',
 
     // Performance logs
     perf: 'color:darkturquoise',

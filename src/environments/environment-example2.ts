@@ -5,9 +5,17 @@
 export const environment = {
   production: false,
   plog: {
-    info: ['color:blue: font-size:2rem;font-weight:bold', 'MY-INFO'],
+    createComponent: ['color:green;', 'New-@Comp'],
+
+    error: 'color:red; font-size:1rem;',
     warn: 'color:orange',
-    error: 'color:red',
+    info: 'color:blue',
+    debug: 'color:limegreen;font-weight:bold',
+
+    action: ['color:#8f72cf; font-weight:bold;', '@ACTION'], // to log inside Action method
+    tu: ['color:blue; font-size:1rem;', 'TU'],
+    errorState: ['color:#cf3c04', '@ERROR'], // to log error in Store
+
   }
 };
 

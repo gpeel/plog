@@ -4,7 +4,8 @@
   "compilerOptions": {
     "paths": {
       "@gpeel/plog": [
-        "projects/gpeel/plog/src/public-api.ts"
+        "dist/gpeel/plog/gpeel-plog",
+        "dist/gpeel/plog"
       ]
     },
     "baseUrl": "./",

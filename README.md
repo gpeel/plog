@@ -5,6 +5,9 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 npm repo:
 https://www.npmjs.com/package/@gpeel/plog
 
+Github repo at :
+https://github.com/gpeel/plog
+
 ![img.png](colorful.jpg)
 
 Medium story : https://medium.com/p/62dd10ba3d10/edit
@@ -217,6 +220,4 @@ You can see ALL available loggers above in DEV/environment.ts
 
 Typescript source codes are delivered inside the installed packge in node_modules/@gpeel/plog/src/lib
 
-Github repo at :
-https://github.com/gpeel/plog
 

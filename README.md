@@ -1,12 +1,14 @@
-# Colorful logs with @gpeel/plog
+# Colorful logs with @gpeel/plog-ng12
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
+So not compatible with Angular v11. (Recompile the source)
+
 npm repo:
-https://www.npmjs.com/package/@gpeel/plog
+https://www.npmjs.com/package/@gpeel/plog-ng12
 
 Github repo at :
-https://github.com/gpeel/plog
+https://github.com/gpeel/plog-12
 
 ![img.png](colorful.jpg)
 

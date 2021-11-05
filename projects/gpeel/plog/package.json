@@ -1,6 +1,6 @@
 {
   "name": "@gpeel/plog-ng12",
-  "version": "12.0.8",
+  "version": "12.1.0",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0"
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gpeel/plog.git"
+    "url": "git+https://github.com/gpeel/plog-ng12.git"
   },
   "author": {
     "name": "Gauthier Peel",
@@ -22,7 +22,7 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gpeel/plog/issues"
+    "url": "https://github.com/gpeel/plog-ng12/issues"
   },
-  "homepage": "https://github.com/gpeel/plog"
+  "homepage": "https://github.com/gpeel/plog-ng12"
 }

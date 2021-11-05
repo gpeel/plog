@@ -2,6 +2,10 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
+For Angular 12.x.y => use @gpeel/plog 12.1.0 or more recent
+
+For Angular 11.x.y => use @gpeel/plog@11.0.1 (last version for angular 11)
+
 npm repo:
 https://www.npmjs.com/package/@gpeel/plog
 

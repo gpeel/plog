@@ -47,6 +47,12 @@ export const Plog = {
   effect: fnNull,
   cache: fnNull,
 
+  formValueChanges: fnNull,
+  formEvent: fnNull,
+  streamEvent: fnNull,
+  subscription: fnNull,
+  unsubscription: fnNull,
+
   // Specific loggers for @gpeel/my-validators
   validationCompute: fnNull, // tracing validators when they compute
   validationErrorMsgRefresh: fnNull, // tracing refresh of <my-error-msg>

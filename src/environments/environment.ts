@@ -39,8 +39,8 @@ export const environment = {
     createResolver: ['color:green', 'New-@Resolver'],
 
     // NG types
-    resolve: 'color:brown',
-    guard: 'color:sandybrown',
+    resolve: ['color:brown', 'RESOLVE'],
+    guard: ['color:sandybrown', 'GUARD'],
     validator: 'color:plum',
     pipe: 'color:brown',
     callback: 'color:violet',
@@ -53,6 +53,12 @@ export const environment = {
     effect: ['color:#8F72CF;font-weight:bold;', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)
     cache: ['color:blueviolet', '@EFFECT'],
 
+    formValueChanges: ['orange', 'FORM-VALUE'],
+    formEvent: ['orange', 'FORM-EVENT'],
+    streamEvent: ['darkorange', 'STREAM'],
+    subscription: ['coral', 'SUBSCRIBED-DATA'],
+    unsubscription: ['coral', 'UN-SUBSCRIPTION'],
+
     // Specific loggers for @gpeel/my-validators
     validationCompute: ['color:orange', '@VALID'], // tracing validators when they compute
     validationErrorMsgRefresh: ['color:orange', '@VALID_PERF'], // tracing refresh of <my-error-msg>
@@ -61,8 +67,8 @@ export const environment = {
 
     // network actions (interceptors)
     network: ['color:blue', 'HTTP'],
-    networkRequest: ['color:blue', 'HttpRequest'],
-    networkResponse: ['color:blue', 'HttpResponse'],
+    networkRequest: ['color:blue', 'HTTP-Request'],
+    networkResponse: ['color:blue', 'HTTP-Response'],
     networkError: ['color:red', 'HTTP-Error'],
     networkCreate: ['color:green', 'NEW-HTTP'],
 
@@ -91,7 +97,7 @@ export const environment = {
 
     // colors
     pink: ['color:#FF40BD;', '######'], // pink flashy
-    red: 'color:red', // red without the console.error() stacktrace
+    red: ['color:red', '######'],
     orange: ['color:orange', '######'],
     green: ['color:springgreen', '######'],
     blue: ['color:cadetblue', '######'],

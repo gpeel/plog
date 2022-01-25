@@ -28,6 +28,7 @@ pipe
 callback
 state
 action
+data
 select
 errorState
 effect

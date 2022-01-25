@@ -79,6 +79,7 @@ export const PLOG_ENVIRONMENT_DEFAULT: PlogConfig = {
     state: 'color:blueviolet', // Redux style or BehaviorSubject, as you want
     // specific logs for NGXS, Akita
     action: ['color:#8f72cf', '@ACTION'], // to log inside Action method
+    data: ['color:coral', 'DATA'],
     select: ['color:#84467c', '@SELECT'], // to log inside select method
     errorState: ['color:#cf3c04', '@ERROR'], // to log error in Store
     effect: ['color:8F72CF', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)

@@ -48,10 +48,11 @@ export const environment = {
     state: 'color:blueviolet', // Redux style or BehaviorSubject, as you want
     // specific logs for NGXS, Akita
     action: ['color:#8f72cf; font-weight:bold;', '@ACTION'], // to log inside Action method
+    data: ['color:coral', 'DATA'], // data incoming into @Component
     select: ['color:plum', '@SELECT'], // to log inside select method
     errorState: ['color:#cf3c04', '@ERROR'], // to log error in Store
     effect: ['color:#8F72CF;font-weight:bold;', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)
-    cache: ['color:blueviolet', '@EFFECT'],
+    cache: ['color:blueviolet', 'CACHE'],
 
     formValueChanges: ['orange', 'FORM-VALUE'],
     formEvent: ['orange', 'FORM-EVENT'],

@@ -5,13 +5,10 @@
 export const environment = {
   production: false,
   plog: {
-
-    debug: 'color:limegreen;font-weight:bold',
+    debug: 'color:limegreen',
     info: 'color:blue',
-    // info: ['color:blue; font-size:1rem;font-weight:bold', 'MY-INFO'],
-    // info: 'jj nn, kkkk ht:bold', // with trash it does not crash!
+    error: 'color:red',
     warn: 'color:orange',
-    error: 'color:red; font-size:1rem;',
 
     // Performance logs
     perf: 'color:darkturquoise',
@@ -31,7 +28,7 @@ export const environment = {
 
     // constructor logs
     create: ['color:green', 'new'],
-    createComponent: ['color:green;', 'New-@Comp'],
+    createComponent: ['color:green', 'New-@Comp'],
     createDirective: ['color:green', 'New-@Dir'],
     createService: ['color:green', 'New-Svc'],
     createPipe: ['color:green', 'New-@Pipe'],
@@ -47,15 +44,16 @@ export const environment = {
 
     state: 'color:blueviolet', // Redux style or BehaviorSubject, as you want
     // specific logs for NGXS, Akita
-    action: ['color:#8f72cf; font-weight:bold;', '@ACTION'], // to log inside Action method
-    data: ['color:coral', 'DATA'], // data incoming into @Component
-    select: ['color:plum', '@SELECT'], // to log inside select method
+    action: ['color:#8f72cf', '@ACTION'], // to log inside Action method
+    data: ['color:coral', 'DATA'],
+    event: ['color:dodgerblue', 'EVENT'],
+    select: ['color:#84467c', '@SELECT'], // to log inside select method
     errorState: ['color:#cf3c04', '@ERROR'], // to log error in Store
-    effect: ['color:#8F72CF;font-weight:bold;', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)
+    effect: ['color:8F72CF', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)
     cache: ['color:blueviolet', 'CACHE'],
 
     formValueChanges: ['orange', 'FORM-VALUE'],
-    formEvent: ['orange', 'FORM-EVENT'],
+    formEvent: ['greenyellow', 'FORM-EVENT'],
     streamEvent: ['darkorange', 'STREAM'],
     subscription: ['coral', 'SUBSCRIBED-DATA'],
     unsubscription: ['coral', 'UN-SUBSCRIPTION'],
@@ -85,34 +83,72 @@ export const environment = {
 
 
     // tests
-    tu: ['color:blue; font-size:1rem;', 'TU'],
+    tu: ['color:slateblue', 'tu'],
     tuBeforeEach: ['color:slateblue', 'tu-BEFORE-EACH'],
     tuBeforeAll: ['color:slateblue', 'tu-BEFORE-ALL'],
     tuAfterEach: ['color:tomato', 'tu-AFTER-EACH'],
     tuAfterAll: ['color:tomato', 'tu-AFTER-ALL'],
-    tuArrange: ['color:blue', 'TU'],
-    tuAct: ['color:blueviolet', 'TU'],
-    tuAssert: ['color:brown', 'TU'],
-    ti: ['color:green', 'TI'],
+    tuArrange: ['color:blue', 'tu'],
+    tuAct: ['color:blueviolet', 'tu'],
+    tuAssert: ['color:brown', 'tu'],
+    ti: ['color:green', 'ti'],
     te2e: ['color:green', 'e2e'],
 
     // colors
-    pink: ['color:#FF40BD;', '######'], // pink flashy
-    red: ['color:red', '######'],
-    orange: ['color:orange', '######'],
-    green: ['color:springgreen', '######'],
-    blue: ['color:cadetblue', '######'],
-    lightBlue: ['color:darkturquoise', '######'],
-    violet: ['color:blueviolet', '######'],
+    pink: ['color:#FF40BD;', '############'], // pink flashy
+    red: ['color:red', '############'],
+    orange: ['color:orange', '############'],
+    green: ['color:springgreen', '############'],
+    blue: ['color:cadetblue', '############'],
+    lightBlue: ['color:darkturquoise', '############'],
+    violet: ['color:blueviolet', '############'],
 
     // same color-loggers with a prefix 'color' (easier to find with intellisense)
-    colorPink: ['color:#FF40BD;', '######'], // pink flashy
+    colorPink: ['color:#FF40BD;', '############'], // pink flashy
     colorRed: 'color:red', // red without the console.error() stacktrace
-    colorOrange: ['color:orange', '######'],
-    colorGreen: ['color:springgreen', '######'],
-    colorBlue: ['color:cadetblue', '######'],
-    colorLightBlue: ['color:darkturquoise', '######'],
-    colorViolet: ['color:blueviolet', '######']
+    colorOrange: ['color:orange', '############'],
+    colorGreen: ['color:springgreen', '############'],
+    colorBlue: ['color:cadetblue', '############'],
+    colorLightBlue: ['color:darkturquoise', '############'],
+    colorViolet: ['color:blueviolet', '############'],
+
+    feature1: ['color:blueviolet', 'FEATURE1'],
+    feature2: ['color:dodgerblue', 'FEATURE2'],
+    feature3: ['color:blue', 'FEATURE3'],
+    feature4: ['color:deepskyblue', 'FEATURE4'],
+    feature5: ['color:hotpink', 'FEATURE5'],
+    feature6: ['color:deeppink', 'FEATURE6'],
+    feature7: ['color:mediumspringgreen', 'FEATURE7'],
+    feature8: ['color:greenyellow', 'FEATURE8'],
+    feature9: ['color:green', 'FEATURE9'],
+    step1: ['color:blueviolet', 'STEP1'],
+    step2: ['color:dodgerblue', 'STEP2'],
+    step3: ['color:blue', 'STEP3'],
+    step4: ['color:deepskyblue', 'STEP4'],
+    step5: ['color:hotpink', 'STEP5'],
+    step6: ['color:deeppink', 'STEP6'],
+    step7: ['color:mediumspringgreen', 'STEP7'],
+    step8: ['color:greenyellow', 'STEP8'],
+    step9: ['color:green', 'STEP9'],
+    usecase1: ['color:blueviolet', 'USECASE1'],
+    usecase2: ['color:dodgerblue', 'USECASE2'],
+    usecase3: ['color:blue', 'USECASE3'],
+    usecase4: ['color:deepskyblue', 'USECASE4'],
+    usecase5: ['color:hotpink', 'USECASE5'],
+    usecase6: ['color:deeppink', 'USECASE6'],
+    usecase7: ['color:mediumspringgreen', 'USECASE7'],
+    usecase8: ['color:greenyellow', 'USECASE8'],
+    usecase9: ['color:green', 'USECASE9'],
+    event1: ['color:blueviolet', 'EVENT1'],
+    event2: ['color:dodgerblue', 'EVENT2'],
+    event3: ['color:blue', 'EVENT3'],
+    event4: ['color:deepskyblue', 'EVENT4'],
+    event5: ['color:hotpink', 'EVENT5'],
+    event6: ['color:deeppink', 'EVENT6'],
+    event7: ['color:mediumspringgreen', 'EVENT7'],
+    event8: ['color:greenyellow', 'EVENT8'],
+    event9: ['color:green', 'EVENT9'],
+
   }
 };
 

@@ -43,6 +43,7 @@ export const Plog = {
   state: fnNull,
   action: fnNull,
   data: fnNull,
+  onAction: fnNull,
   event: fnNull,
   select: fnNull,
   errorState: fnNull,

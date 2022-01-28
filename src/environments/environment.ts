@@ -13,7 +13,7 @@ export const environment = {
     // Performance logs
     perf: 'color:darkturquoise',
     perfComponent: ['color:darkturquoise', 'PERF-¤¤'],
-    perfCD: ['color:darkturquoise', 'PERF-¤¤¤¤¤¤¤'],
+    perfCD: ['color:darkturquoise', 'PERF-¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤'],
     perfDom: ['color:darkturquoise', 'PERF-¤-¤-¤-¤'],
 
     // NG hooks
@@ -46,6 +46,7 @@ export const environment = {
     // specific logs for NGXS, Akita
     action: ['color:#8f72cf', '@ACTION'], // to log inside Action method
     data: ['color:coral', 'DATA'],
+    onAction: ['color:orange', 'ON'], // log for onClick() ... NG event Handlers
     event: ['color:dodgerblue', 'EVENT'],
     select: ['color:#84467c', '@SELECT'], // to log inside select method
     errorState: ['color:#cf3c04', '@ERROR'], // to log error in Store

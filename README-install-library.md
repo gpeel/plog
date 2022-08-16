@@ -1,6 +1,6 @@
 # GpeelPlogNg12
 
-@gpeel/plog@12.0.0 is the first version migrated for Angular 12.
+@gpeel/plog@12.0.0 is the first version migrated for Angular 12, 13 or 14
 
 Here is the addtional steps used to install the library into this project.
 
@@ -44,7 +44,7 @@ And now you can change that to src with :
           "@gpeel/plog": ["src/public-api.ts"]
       }
 
-##       
+##        
 
 In .eslintrc.json the geneated path is wrong, change it from :
 line 2

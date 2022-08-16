@@ -14,7 +14,7 @@ https://github.com/gpeel/plog
 
 ![img.png](colorful.jpg)
 
-Medium story : https://medium.com/p/62dd10ba3d10/edit
+Medium story : https://medium.com/p/62dd10ba3d10/
 
 ## INSTALLATION
 

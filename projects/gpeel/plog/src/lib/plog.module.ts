@@ -92,7 +92,7 @@ function initialize(plogConfig: PlogConfig): void {
   Object.keys(plogConfig.plog).forEach(key => {
     const maybeArray = plogConfig.plog[key];
     let prefix = key;
-    let color;
+    let color: string;
     if (maybeArray instanceof Array) {
       prefix = maybeArray[1];
       color = maybeArray[0];
@@ -108,6 +108,10 @@ function initialize(plogConfig: PlogConfig): void {
         prefixCapitalized = prefixCapitalized + ' ';
       }
     }
-    (Plog as Indexable)[key] = console.info.bind(console, `%c${prefixCapitalized}`, `${color}`);
+    if (color.startsWith('test')) {
+      (Plog as Indexable)[key] = console.info.bind(console);
+    } else {
+      (Plog as Indexable)[key] = console.info.bind(console, `%c${prefixCapitalized}`, `${color}`);
+    }
   });
 }

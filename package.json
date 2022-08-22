@@ -9,7 +9,7 @@
     "cpSources_3": "cpx -v \"./projects/gpeel/plog/src/**/*.*\"   ./dist/gpeel/plog/src",
     "publish_4": "cd ./dist/gpeel/plog && npm publish --access public ",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

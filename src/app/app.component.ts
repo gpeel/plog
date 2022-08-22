@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'gpeel-plog-ng12';
 
   constructor() {
-    Plog.info('My info!');
+    Plog.info('My info!', 'info2', 'info3');
     Plog.warn('My Warn!');
     Plog.error('My Error!');
     Plog.perf('computing for 34 times');

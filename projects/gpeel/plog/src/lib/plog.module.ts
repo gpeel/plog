@@ -108,8 +108,8 @@ function initialize(plogConfig: PlogConfig): void {
         prefixCapitalized = prefixCapitalized + ' ';
       }
     }
-    if (color.startsWith('test')) {
-      (Plog as Indexable)[key] = console.info.bind(console);
+    if (color === 'test') {
+      (Plog as Indexable)[key] = console.info.bind(console, prefixCapitalized);
     } else {
       (Plog as Indexable)[key] = console.info.bind(console, `%c${prefixCapitalized}`, `${color}`);
     }

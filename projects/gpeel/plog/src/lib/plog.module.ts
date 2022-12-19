@@ -41,49 +41,36 @@ export class PlogModule {
 
 let initialized = false;
 
-
-export function rootPlogFactory(environment: any): () => Promise<any> {
-
-  const localFunc = (): Promise<any> => {
-    return new Promise((resolve, reject) => {
-
-      setTimeout(() => {
-        if (!initialized) {
-          /**
-           * get the Default config for DEV or PROD mode
-           */
-          const CONFIG = environment.production ? PLOG_ENVIRONMENT_PROD_DEFAULT : PLOG_ENVIRONMENT_DEFAULT;
-
-          if (!environment.plog) {
-            console.warn('****************************');
-            console.warn('YOU DID NOT initialize Plog explicitly =>  Taking the default configuration for Plog');
-            if (environment.production) {
-              console.warn('Taking : node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_PROD_DEFAULT.ts.ts');
-            } else {
-              console.warn('Taking : node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_DEFAULT.ts');
-            }
-            console.warn('If you want something else configure your environment.ts file');
-            console.warn('Example in node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_DEFAULT.ts comment');
-            console.warn('****************************');
-          }
-
-          /**
-           * Check if you have a Specific config defined, if so take it.
-           */
-          const plogConfig = environment.plog ? environment : CONFIG;
-          initialize(plogConfig);
-          initialized = true;
+export function rootPlogFactory(environment: any): (() => void) {
+  return () => {
+    if (!initialized) {
+      if (!environment.plog) {
+        console.log('****************************');
+        console.log('YOU DID NOT initialize Plog explicitly =>  Taking the default configuration for Plog');
+        if (environment.production) {
+          console.log('Taking : node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_PROD_DEFAULT.ts.ts');
+        } else {
+          console.log('Taking : node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_DEFAULT.ts');
         }
+        console.log('If you want something else configure your environment.ts file');
+        console.log('Example in node_module/@gpeel/plog/src/lib/PLOG_ENVIRONMENT_DEFAULT.ts');
+        console.log('****************************');
+      }
 
-        resolve(null);
-      }, 2000);
-    });
+      /**
+       * get the Default config for DEV or PROD mode
+       */
+      const CONFIG = environment.production ? PLOG_ENVIRONMENT_PROD_DEFAULT : PLOG_ENVIRONMENT_DEFAULT;
+
+      /**
+       * Check if you have a Specific config defined, if so take it otherwise take the default CONFIG.
+       */
+      const plogConfig = environment.plog ? environment : CONFIG;
+      initialize(plogConfig);
+      initialized = true;
+    }
   };
-
-  return localFunc;
-
 }
-
 
 function initialize(plogConfig: PlogConfig): void {
 
@@ -108,7 +95,7 @@ function initialize(plogConfig: PlogConfig): void {
         prefixCapitalized = prefixCapitalized + ' ';
       }
     }
-    if (color === 'test') {
+    if (color === 'test' || color === 'no-css') {
       (Plog as Indexable)[key] = console.info.bind(console, prefixCapitalized);
     } else {
       (Plog as Indexable)[key] = console.info.bind(console, `%c${prefixCapitalized}`, `${color}`);

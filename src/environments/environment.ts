@@ -17,8 +17,8 @@ export const environment = {
     perfDom: ['color:darkturquoise', 'PERF-¤-¤-¤-¤'],
 
     // NG hooks
-    ngOnChanges: ['color:orange', 'OnChange'],
-    ngOnInit: ['color:orange', 'OnInit'],
+    ngOnChanges: ['no-css', 'OnChange'],
+    ngOnInit: ['test', 'OnInit'],
     ngOnDestroy: ['color:orange', 'OnDestroy'],
     ngDoCheck: ['color:orange', 'DoCheck'],
     ngAfterContentInit: ['color:orange', 'AfterContentInit'],
@@ -81,7 +81,6 @@ export const environment = {
     obsSuccess: ['color:springgreen', 'OBS-SUCCESS'],
     obsError: ['color:red', 'OBS-ERROR'],
     obsDebug: ['color:springgreen', 'OBS-DEBUG'],
-
 
     // tests
     tu: ['color:slateblue', 'tu'],

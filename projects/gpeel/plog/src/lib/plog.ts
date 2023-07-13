@@ -50,6 +50,16 @@ export const Plog = {
   effect: fnNull,
   cache: fnNull,
 
+  // Signals
+  signal: fnNull,
+  siEffect: fnNull,
+  siEffectCleanup: fnNull,
+  siSet: fnNull,
+  siModif: fnNull,
+  siUpdate: fnNull,
+  siMutate: fnNull,
+  siComputed: fnNull,
+
   formValueChanges: fnNull,
   formEvent: fnNull,
   streamEvent: fnNull,
@@ -78,6 +88,7 @@ export const Plog = {
   obsSuccess: fnNull,
   obsError: fnNull,
   obsDebug: fnNull,
+  obsComplete: fnNull,
 
   tu: fnNull,
   tuBeforeEach: fnNull,

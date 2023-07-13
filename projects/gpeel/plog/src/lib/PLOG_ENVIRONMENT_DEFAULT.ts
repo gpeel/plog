@@ -30,7 +30,8 @@ import {PlogConfig} from './plog';
  *    }
  * };
  * PLOG_ENVIRONMENT_DEFAULT is taken in DEV mode if no environment.plog property is defined
- * PLOG_ENVIRONMENT_PROD_DEFAULT is taken in PROD mode if no environment.plog property is defined on your file environment.prod.ts
+ * PLOG_ENVIRONMENT_PROD_DEFAULT is taken in PROD mode if no environment.plog property is defined on your file
+ * environment.prod.ts
  *
  * A PlogConfig is basically an environment.ts struture with a plog property defining the logging loggers.
  * Feel free to copy/paste this config into your environment.ts
@@ -87,6 +88,15 @@ export const PLOG_ENVIRONMENT_DEFAULT: PlogConfig = {
     effect: ['color:8F72CF', '@EFFECT'], // to log inside effect method (even if using @Effet is not advised)
     cache: ['color:blueviolet', 'CACHE'],
 
+    signal: ['color:blueviolet', 'SIGNALS'],
+    siEffect: ['color:blueviolet', 'SIGNALS-EFFECT'],
+    siEffectCleanup: ['color:blueviolet', 'SIGNALS-EFFECT-CLEANUP'],
+    siSet: ['color:blueviolet', 'SIGNALS-SET'],
+    siModif: ['color:blueviolet', 'SIGNALS-MODIF'],
+    siUpdate: ['color:blueviolet', 'SIGNALS-UPDATE'],
+    siMutate: ['color:blueviolet', 'SIGNALS-MUTATE'],
+    siComputed: ['color:blueviolet', 'SIGNALS-COMPUTED'],
+
     formValueChanges: ['orange', 'FORM-VALUE'],
     formEvent: ['greenyellow', 'FORM-EVENT'],
     streamEvent: ['darkorange', 'STREAM'],
@@ -115,7 +125,7 @@ export const PLOG_ENVIRONMENT_DEFAULT: PlogConfig = {
     obsSuccess: ['color:springgreen', 'OBS-SUCCESS'],
     obsError: ['color:red', 'OBS-ERROR'],
     obsDebug: ['color:springgreen', 'OBS-DEBUG'],
-
+    obsComplete: ['color:springgreen', 'OBS-COMPLETE'],
 
     // tests
     tu: ['color:slateblue', 'tu'],
@@ -186,7 +196,6 @@ export const PLOG_ENVIRONMENT_DEFAULT: PlogConfig = {
     event7: ['color:mediumspringgreen', 'EVENT7'],
     event8: ['color:greenyellow', 'EVENT8'],
     event9: ['color:green', 'EVENT9'],
-
 
   }
 };
